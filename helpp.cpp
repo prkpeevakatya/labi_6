@@ -77,3 +77,33 @@ int summ_string(int** Q, int n, int w)
     }
     return ssumm;
 }
+
+bool contains_7_not_6(int x)
+    {
+        int xx = x;
+        int o1 = 0;
+        int o2 = 1;
+        while (x > 0) 
+        {
+            if (x % 10 == 7) o1 = 1;
+            x /= 10;
+        }
+        while (xx > 0)
+        {
+            if (xx % 10 == 6) o2 = 0;
+            xx /= 10;
+        }
+        if (o1 + o2 == 2) return true;
+        return false;
+    }
+
+
+bool is_prime(int x)
+    {
+        if (x == 1) return false;
+        int r = sqrt(x);
+        for (int d = 2; d <= r; d++)
+            if (x % d == 0) return false;
+
+        return true;
+    }

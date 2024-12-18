@@ -31,3 +31,25 @@ void sort_mass(int* A, int maxi)
                 swap(A[i], A[j]);
         }
 }
+
+
+int summ_of_digit(int a)  
+{
+    int summa = 0;
+    int h = a;
+    while (h != 0)
+    {
+        summa += (h % 10);
+        h /= 10;
+    }
+    return summa;
+}
+
+
+int first_digit(int a)  
+{
+    int let = a;
+    while (let > 10)
+        let /= 10;
+    return let;
+}

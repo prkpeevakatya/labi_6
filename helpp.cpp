@@ -53,3 +53,27 @@ int first_digit(int a)
         let /= 10;
     return let;
 }
+
+
+int** create_and_fill_array3(int n)    
+{
+    int** Q = new int* [n];
+    for (int i = 0; i < n; i++)
+        Q[i] = new int[n];
+
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            cin >> Q[i][j];
+
+    return Q;
+}
+
+int summ_string(int** Q, int n, int w) 
+{
+    int ssumm = 0;
+    for (int i = 0; i < n; i++)
+    {
+        ssumm += Q[w][i];
+    }
+    return ssumm;
+}
